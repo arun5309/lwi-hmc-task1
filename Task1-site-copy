@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Task1</title>
+    <meta name="description" content="Task1 html code only">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="Task1-site-copy_files/theme.css">
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <main>
+		<h1>This is html code of task1 server. </h1>
+		<img src="Task1-site-copy_files/image.png" alt="No Pic">
+    </main>
+  
+
+
+</body></html>
