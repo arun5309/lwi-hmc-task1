@@ -98,6 +98,14 @@ resource "aws_s3_bucket" "task1-image-bucket" {
 	}
 }
 
+resource "aws_s3_bucket_object" "image-png" {
+	bucket = "task1-image-bucket"
+	key = "image.png"
+	source = "../image/image.png"
+	etag = filemd5("../image/image.png")
+	acl = "public-read"
+}
+
 locals {
 	s3_origin_id = "s3-origin"
 }
@@ -131,7 +139,7 @@ resource "aws_cloudfront_distribution" "task1-s3-distribution" {
 
 		viewer_protocol_policy = "redirect-to-https"
     	min_ttl                = 0
-    	default_ttl            = 720
+    	default_ttl            = 120
     	max_ttl                = 86400
 	}
 
