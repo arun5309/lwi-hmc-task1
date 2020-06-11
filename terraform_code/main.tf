@@ -69,9 +69,11 @@ resource "aws_instance" "task1_main_instance" {
 		Name = "task1_main_instance"
 	}
 
-	connection {
+
+	user_data = file("install_apache.sh")
+	/*connection {
 		type = "ssh"
-		//host = self.ho 
+		host = self.ho 
 		user = "ec2-user"
 		password = file("~/.ssh/id_rsa")
 	}
@@ -85,7 +87,7 @@ resource "aws_instance" "task1_main_instance" {
 			"sudo cp -r lwi-hmc-task1/html /var/www/",
 			"sudo systemctl --now enable httpd"
 		]
-	}
+	}*/
 }
 
 resource "aws_s3_bucket" "task1-image-bucket" {
